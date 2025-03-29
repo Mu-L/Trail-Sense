@@ -8,8 +8,6 @@
 
 Trail Sense is a tool, and just like any other tool that you bring into the wilderness, it's essential to have backup equipment and skills.
 
-As featured in the [#WeArePlay](http://g.co/play/weareplay-usa) campaign!
-
 See the [Technical Blog / Research](https://kylecorry.com/research/categories/trail-sense/)
 
 <table>
