@@ -19,6 +19,8 @@ import com.kylecorry.trail_sense.shared.FormatService
 import com.kylecorry.trail_sense.shared.Units
 import com.kylecorry.trail_sense.shared.UserPreferences
 import com.kylecorry.trail_sense.shared.sensors.LocationSubsystem
+import com.kylecorry.trail_sense.tools.climate.domain.VegetationType
+import com.kylecorry.trail_sense.tools.climate.infrastructure.vegetation.VegetationModel
 import com.kylecorry.trail_sense.tools.weather.infrastructure.subsystem.WeatherSubsystem
 import com.kylecorry.trail_sense.tools.weather.ui.charts.YearlyTemperatureRangeChart
 import java.time.LocalDate
@@ -33,6 +35,7 @@ class ClimateFragment : BoundFragment<FragmentClimateBinding>() {
     private val formatter by lazy { FormatService.getInstance(requireContext()) }
 
     private var temperatures: List<Pair<LocalDate, Range<Temperature>>> = emptyList()
+    private var vegetationTypes: List<VegetationType> = emptyList()
     private var currentYear = 0
 
     private val chart by lazy {
@@ -49,7 +52,11 @@ class ClimateFragment : BoundFragment<FragmentClimateBinding>() {
         // Populate the initial location and elevation
         binding.location.coordinate = location.location
         val elevation = location.elevation.convertTo(distanceUnits)
-        val roundedElevation = elevation.copy(distance = elevation.distance.roundPlaces(Units.getDecimalPlaces(distanceUnits)))
+        val roundedElevation = elevation.copy(
+            distance = elevation.distance.roundPlaces(
+                Units.getDecimalPlaces(distanceUnits)
+            )
+        )
         binding.elevation.elevation = roundedElevation
 
         reloadTemperatures()
@@ -101,7 +108,7 @@ class ClimateFragment : BoundFragment<FragmentClimateBinding>() {
     }
 
     private fun reloadTemperatures(recalculate: Boolean = true) {
-        loadTemperatures(
+        loadClimateData(
             binding.displayDate.date,
             binding.location.coordinate ?: location.location,
             binding.elevation.elevation ?: Distance.meters(0f),
@@ -109,7 +116,7 @@ class ClimateFragment : BoundFragment<FragmentClimateBinding>() {
         )
     }
 
-    private fun loadTemperatures(
+    private fun loadClimateData(
         date: LocalDate,
         location: Coordinate,
         elevation: Distance,
@@ -118,8 +125,14 @@ class ClimateFragment : BoundFragment<FragmentClimateBinding>() {
         inBackground {
             runner.replace {
                 if (recalculate) {
-                    temperatures = weather.getTemperatureRanges(date.year, location, elevation, calibrated = false)
+                    temperatures = weather.getTemperatureRanges(
+                        date.year,
+                        location,
+                        elevation,
+                        calibrated = false
+                    )
                     currentYear = date.year
+                    vegetationTypes = VegetationModel.getVegetationTypes(requireContext(), location)
                 }
 
                 val range = temperatures.first { it.first == date }.second
@@ -128,6 +141,7 @@ class ClimateFragment : BoundFragment<FragmentClimateBinding>() {
                     if (isBound) {
                         plotTemperatures(temperatures)
                         updateTitle(range)
+                        updateVegetation(vegetationTypes)
                     }
                 }
             }
@@ -148,6 +162,26 @@ class ClimateFragment : BoundFragment<FragmentClimateBinding>() {
     private fun plotTemperatures(data: List<Pair<LocalDate, Range<Temperature>>>) {
         chart.plot(data, temperatureUnits)
         chart.highlight(binding.displayDate.date)
+    }
+
+    private fun updateVegetation(data: List<VegetationType>) {
+        binding.vegetationTypes.text = formatter.join(
+            *data.map {
+                when (it) {
+                    VegetationType.CropsMixedFarming, VegetationType.IrrigatedCrops -> "Crops"
+                    VegetationType.Grass, VegetationType.TallGrass -> "Grass"
+                    VegetationType.EvergreenNeedleleafTrees, VegetationType.DeciduousNeedleleafTrees, VegetationType.DeciduousBroadleafTrees, VegetationType.EvergreenBroadleafTrees, VegetationType.MixedForestWoodland, VegetationType.InterruptedForest -> "Forest"
+                    VegetationType.Desert, VegetationType.Semidesert -> "Desert"
+                    VegetationType.Tundra -> "Tundra"
+                    VegetationType.IceCapsAndGlaciers -> "Glaciers"
+                    VegetationType.BogsAndMarshes -> "Swamp"
+                    VegetationType.InlandWater, VegetationType.WaterAndLandMixtures -> "Water"
+                    VegetationType.Ocean -> "Ocean"
+                    VegetationType.EvergreenShrubs, VegetationType.DeciduousShrubs -> "Shrubs"
+                }
+            }.toTypedArray(),
+            separator = FormatService.Separator.Comma
+        )
     }
 
 }
