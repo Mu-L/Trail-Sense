@@ -11,6 +11,7 @@ import com.kylecorry.sol.science.meteorology.KoppenGeigerClimateGroup
 import com.kylecorry.sol.science.meteorology.KoppenGeigerSeasonalPrecipitationPattern
 import com.kylecorry.sol.science.meteorology.KoppenGeigerTemperaturePattern
 import com.kylecorry.sol.science.meteorology.Meteorology
+import com.kylecorry.sol.units.Coordinate
 import com.kylecorry.sol.units.Distance
 import com.kylecorry.sol.units.DistanceUnits
 import com.kylecorry.sol.units.Temperature
@@ -27,9 +28,11 @@ import com.kylecorry.trail_sense.shared.views.ElevationInputView
 import com.kylecorry.trail_sense.tools.climate.domain.BiologicalActivity
 import com.kylecorry.trail_sense.tools.climate.domain.BiologicalActivityType
 import com.kylecorry.trail_sense.tools.climate.domain.PhenologyService
+import com.kylecorry.trail_sense.tools.climate.infrastructure.ClimateSubsystem
 import com.kylecorry.trail_sense.tools.weather.infrastructure.subsystem.WeatherSubsystem
 import java.time.LocalDate
 import java.time.Month
+import kotlin.math.exp
 
 class ClimateFragment : TrailSenseReactiveFragment(R.layout.fragment_climate) {
 
@@ -129,6 +132,10 @@ class ClimateFragment : TrailSenseReactiveFragment(R.layout.fragment_climate) {
                     date.year, location, elevation, calibrated = false
                 )
             }
+
+        val dewpoints = useDewpoints(date.year, location, elevation)
+
+        val humidity = useHumidity(dewpoints, temperatures)
 
         // View effects
         useEffectWithCleanup(
@@ -235,6 +242,13 @@ class ClimateFragment : TrailSenseReactiveFragment(R.layout.fragment_climate) {
             precipitationChart.highlight(date.month)
         }
 
+        // Humidity / dew point
+        useEffect(humidity, date) {
+            humidity ?: return@useEffect
+
+            println(humidity.firstOrNull { it.first == date })
+        }
+
         // Climate zone
         useEffect(climateClassification, climateZoneTitleView, climateZoneDescriptionView) {
             climateClassification?.let {
@@ -263,6 +277,39 @@ class ClimateFragment : TrailSenseReactiveFragment(R.layout.fragment_climate) {
     override fun onPause() {
         super.onPause()
         cleanupEffects()
+    }
+
+    private fun useDewpoints(
+        year: Int,
+        location: Coordinate,
+        elevation: Distance
+    ): List<Pair<LocalDate, Temperature>>? {
+        val climate = useService<ClimateSubsystem>()
+
+        return useBackgroundMemo(year, location, elevation) {
+            climate.getYearlyDewpoints(year, location, elevation)
+        }
+    }
+
+    private fun useHumidity(
+        dewpoints: List<Pair<LocalDate, Temperature>>?,
+        temperatures: List<Pair<LocalDate, Range<Temperature>>>?
+    ): List<Pair<LocalDate, Float>>? {
+        if (dewpoints == null || temperatures == null) {
+            return null
+        }
+
+        return dewpoints.mapNotNull { dewpoint ->
+            val temperature = temperatures.firstOrNull { it.first == dewpoint.first }?.second
+                ?: return@mapNotNull null
+            val t = temperature.end
+            val td = dewpoint.second
+            dewpoint.first to (100 * getSaturationPressure(td) / getSaturationPressure(t))
+        }
+    }
+
+    private fun getSaturationPressure(temperature: Temperature): Float {
+        return 6.122f * exp((17.62f * temperature.celsius().temperature) / (243.12f + temperature.celsius().temperature))
     }
 
     private fun isActivityWrapped(activePeriods: List<Range<LocalDate>>): Boolean {
