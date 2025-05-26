@@ -70,7 +70,10 @@ class MapLayer : ILayer {
                 isDither = true
                 alpha = opacity
             }
-            loader.tileCache.forEach { (tile, bitmaps) ->
+
+            val sortedTiles = loader.tileCache.entries.sortedBy { it.key.z }
+
+            sortedTiles.forEach { (tile, bitmaps) ->
                 val tileBounds = tile.getBounds()
                 bitmaps.reversed().forEach { bitmap ->
                     val topLeftPixel = map.toPixel(tileBounds.northWest)

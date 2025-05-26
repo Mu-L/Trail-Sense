@@ -17,6 +17,8 @@ import kotlin.math.min
 
 class PhotoMapRegionLoader(private val map: PhotoMap) {
 
+    private val optionsCache = mutableMapOf<Pair<Int, Int>, BitmapFactory.Options>()
+
     suspend fun load(tile: Tile, maxSize: Size? = null): Bitmap? {
         return load(tile.getBounds(), maxSize)
     }
@@ -41,23 +43,14 @@ class PhotoMapRegionLoader(private val map: PhotoMap) {
             max(northWest.y.toInt(), southEast.y.toInt())
         )
 
+        // Early return for invalid regions
+        if (region.width() <= 0 || region.height() <= 0) {
+            return@onIO null
+        }
+
         // TODO: Load PDF region
         fileSystem.streamLocal(map.filename).use { stream ->
-            val options = BitmapFactory.Options().also {
-                if (maxSize != null) {
-                    it.inSampleSize = calculateInSampleSize(
-                        region.width(),
-                        region.height(),
-                        maxSize.width,
-                        maxSize.height
-                    )
-                    it.inScaled = true
-                    it.inPreferredConfig = Bitmap.Config.RGB_565
-                }
-            }
-            if (region.width() <= 0 || region.height() <= 0) {
-                return@use null // No area to load
-            }
+            val options = getBitmapOptions(region, maxSize)
 
             ImageRegionLoader.decodeBitmapRegionWrapped(
                 stream,
@@ -66,6 +59,30 @@ class PhotoMapRegionLoader(private val map: PhotoMap) {
                 options = options,
                 enforceBounds = false
             )
+        }
+    }
+
+    private fun getBitmapOptions(region: Rect, maxSize: Size?): BitmapFactory.Options {
+        val key = Pair(region.width(), region.height())
+
+        return optionsCache.getOrPut(key) {
+            BitmapFactory.Options().apply {
+                if (maxSize != null) {
+                    inSampleSize = calculateInSampleSize(
+                        region.width(),
+                        region.height(),
+                        maxSize.width,
+                        maxSize.height
+                    )
+                    inScaled = true
+                    // Use RGB_565 for better memory efficiency with slight quality trade-off
+                    inPreferredConfig = Bitmap.Config.RGB_565
+                    // Enable bitmap reuse for better memory management
+                    inMutable = false
+                    // Optimize for faster decoding
+                    inTempStorage = ByteArray(16 * 1024)
+                }
+            }
         }
     }
 

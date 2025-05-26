@@ -2,6 +2,7 @@ package com.kylecorry.trail_sense.tools.maps.infrastructure.tiles
 
 import android.graphics.Bitmap
 import android.util.Size
+import com.kylecorry.luna.coroutines.onIO
 import com.kylecorry.sol.science.geology.CoordinateBounds
 import com.kylecorry.trail_sense.shared.ParallelCoroutineRunner
 import com.kylecorry.trail_sense.tools.maps.domain.PhotoMap
@@ -24,70 +25,73 @@ class TileLoader {
         }
     }
 
-    suspend fun loadTiles(maps: List<PhotoMap>, bounds: CoordinateBounds, metersPerPixel: Float) {
-        // Step 1: Split the visible area into tiles (geographic)
-        val tiles = TileMath.getTiles(bounds, metersPerPixel.toDouble())
-
-        // Step 2: For each tile, determine which map(s) will supply it.
-        val tileSources = mutableMapOf<Tile, List<PhotoMap>>()
-        val sourceSelector = MercatorTileSourceSelector(maps)
-        for (tile in tiles) {
-            val sources = sourceSelector.getSources(tile.getBounds())
-            if (sources.isNotEmpty()) {
-                tileSources[tile] = sources.take(2)
-            }
-        }
-
-        val newTiles = ConcurrentHashMap<Tile, List<Bitmap>>()
-        synchronized(lock) {
-            tileCache.keys.forEach { key ->
-                if (!tileSources.containsKey(key)) {
-                    tileCache[key]?.forEach { bitmap -> bitmap.recycle() }
-                } else {
-                    // If the tile is still relevant, keep it
-                    newTiles[key] = tileCache[key]!!
+    suspend fun loadTiles(maps: List<PhotoMap>, bounds: CoordinateBounds, metersPerPixel: Float) =
+        onIO {
+            val tiles = TileMath.getTiles(bounds, metersPerPixel.toDouble())
+            val tileSources = mutableMapOf<Tile, List<PhotoMap>>()
+            val sourceSelector = MercatorTileSourceSelector(maps)
+            for (tile in tiles) {
+                val sources = sourceSelector.getSources(tile.getBounds())
+                if (sources.isNotEmpty()) {
+                    tileSources[tile] = sources.take(2)
                 }
             }
-            tileCache = newTiles.toMap()
-        }
 
-        synchronized(lock) {
-            tileCache = newTiles
-        }
-
-
-        val parallel = ParallelCoroutineRunner()
-
-        val middleX = tileSources.keys.map { it.x }.average()
-        val middleY = tileSources.keys.map { it.y }.average()
-
-        val sortedEntries = tileSources.entries
-            .sortedBy { hypot(it.key.x - middleX, it.key.y - middleY) }
-
-        parallel.run(sortedEntries.toList()) { source ->
-            if (newTiles.containsKey(source.key)) {
-                return@run
-            }
-            // Load tiles from the bitmap
-            val entries = mutableListOf<Bitmap>()
-
+            val newTiles = ConcurrentHashMap<Tile, List<Bitmap>>()
             synchronized(lock) {
-                newTiles[source.key] = entries
+                tileCache.keys.forEach { key ->
+                    newTiles[key] = tileCache[key] ?: return@forEach
+                }
+                tileCache = newTiles
             }
 
-            source.value.forEach {
-                val loader = PhotoMapRegionLoader(it)
-                val image = loader.load(
-                    source.key,
-                    Size(TileMath.WORLD_TILE_SIZE, TileMath.WORLD_TILE_SIZE)
-                )
-                if (image != null) {
-                    synchronized(lock) {
+            val parallel = ParallelCoroutineRunner()
+
+            val middleX = tileSources.keys.map { it.x }.average()
+            val middleY = tileSources.keys.map { it.y }.average()
+
+            val sortedEntries = tileSources.entries
+                .sortedBy { hypot(it.key.x - middleX, it.key.y - middleY) }
+
+            parallel.run(sortedEntries) { source ->
+                val tile = source.key
+
+                if (newTiles.containsKey(tile)) {
+                    return@run
+                }
+
+                // Load tiles from the bitmap
+                val entries = mutableListOf<Bitmap>()
+
+                source.value.forEach { photoMap ->
+                    val loader = PhotoMapRegionLoader(photoMap)
+                    val image = loader.load(
+                        tile,
+                        Size(TileMath.WORLD_TILE_SIZE, TileMath.WORLD_TILE_SIZE)
+                    )
+
+                    if (image != null && !image.isRecycled) {
                         entries.add(image)
                     }
                 }
+
+                if (entries.isNotEmpty()) {
+                    newTiles[tile] = entries
+                }
             }
 
+            synchronized(lock) {
+                val keysToRemove = mutableListOf<Tile>()
+                newTiles.forEach { (tile, bitmaps) ->
+                    if (!tileSources.containsKey(tile)) {
+                        bitmaps.forEach { it.recycle() }
+                        keysToRemove.add(tile)
+                    }
+                }
+                keysToRemove.forEach {
+                    newTiles.remove(it)
+                }
+
+            }
         }
-    }
 }
