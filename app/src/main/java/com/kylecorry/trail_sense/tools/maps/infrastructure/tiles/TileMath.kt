@@ -21,7 +21,7 @@ object TileMath {
         val maxLat = min(bounds.north, MAX_LATITUDE)
         return getTiles(
             bounds,
-            distancePerPixelToZoom(metersPerPixel, (minLat + maxLat) / 2).coerceAtMost(maxZoom)
+            metersPerPixelToZoom(metersPerPixel, (minLat + maxLat) / 2).coerceAtMost(maxZoom)
         )
     }
 
@@ -53,14 +53,14 @@ object TileMath {
         return x to y
     }
 
-    private fun distancePerPixelToZoom(
-        distancePerPixel: Double,
+    fun metersPerPixelToZoom(
+        metersPerPixel: Double,
         latitude: Double
     ): Int {
         val earthCircumference = Geology.EARTH_AVERAGE_RADIUS * 2 * PI
-        val metersPerPixel =
+        val actualMetersPerPixel =
             earthCircumference * cos(Math.toRadians(latitude)) / (WORLD_TILE_SIZE * (1 shl 0))
-        return log2(metersPerPixel / distancePerPixel).toInt()
+        return log2(actualMetersPerPixel / metersPerPixel).toInt()
     }
 
     private const val MIN_LATITUDE = -85.0511

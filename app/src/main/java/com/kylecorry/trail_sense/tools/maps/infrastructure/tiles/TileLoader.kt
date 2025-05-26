@@ -23,9 +23,28 @@ class TileLoader {
         }
     }
 
+    private val baseMapZoomLevels = listOf(
+        2.5f,
+        5f,
+        10f,
+        20f,
+        40f,
+        80f,
+        160f,
+        320f,
+        740f,
+        1480f,
+        2960f,
+    )
+
     suspend fun loadTiles(maps: List<PhotoMap>, bounds: CoordinateBounds, metersPerPixel: Float) {
         // Step 1: Split the visible area into tiles (geographic)
-        val tiles = TileMath.getTiles(bounds, metersPerPixel.toDouble())
+        val nextZoom = baseMapZoomLevels.firstOrNull { it >= metersPerPixel }
+        val tiles = TileMath.getTiles(bounds, metersPerPixel.toDouble()) + if (nextZoom != null) {
+            TileMath.getTiles(bounds, nextZoom.toDouble())
+        } else {
+            emptyList()
+        }
 
         // Step 2: For each tile, determine which map(s) will supply it.
         val tileSources = mutableMapOf<Tile, List<PhotoMap>>()
@@ -40,14 +59,13 @@ class TileLoader {
         val newTiles = ConcurrentHashMap<Tile, List<Bitmap>>()
         synchronized(lock) {
             tileCache.keys.forEach { key ->
-                if (!tileSources.containsKey(key)) {
-                    tileCache[key]?.forEach { bitmap -> bitmap.recycle() }
-                } else {
-                    // If the tile is still relevant, keep it
-                    newTiles[key] = tileCache[key]!!
-                }
+//                if (!tileSources.containsKey(key)) {
+//                    tileCache[key]?.forEach { bitmap -> bitmap.recycle() }
+//                } else {
+                // If the tile is still relevant, keep it
+                newTiles[key] = tileCache[key]!!
+//                }
             }
-            tileCache = newTiles.toMap()
         }
 
         synchronized(lock) {
@@ -78,7 +96,17 @@ class TileLoader {
                     }
                 }
             }
+        }
 
+        // Remove old bitmaps
+        synchronized(lock) {
+            // Recycle
+            tileCache.filter { !tileSources.containsKey(it.key) }
+                .forEach { (_, bitmaps) ->
+                    bitmaps.forEach { it.recycle() }
+                }
+
+            tileCache = tileCache.filter { tileSources.containsKey(it.key) }
         }
     }
 }

@@ -20,7 +20,7 @@ class MapLayer : ILayer {
     private var maps: List<PhotoMap> = emptyList()
     private var opacity: Int = 255
     private var lastBounds: CoordinateBounds? = null
-    private val runner = CoroutineQueueRunner()
+    private val runner = CoroutineQueueRunner(2)
     private val scope = CoroutineScope(Dispatchers.Default)
     private val loader = TileLoader()
 
@@ -48,7 +48,7 @@ class MapLayer : ILayer {
             isInvalid = false
             lastBounds?.let {
                 scope.launch {
-                    runner.replace {
+                    runner.enqueue {
                         try {
                             loader.loadTiles(maps, it, map.metersPerPixel)
                         } catch (e: CancellationException) {
@@ -68,32 +68,40 @@ class MapLayer : ILayer {
                 isAntiAlias = true
                 isFilterBitmap = true
                 isDither = true
-                alpha = opacity
+//                alpha = opacity
             }
-            loader.tileCache.forEach { (tile, bitmaps) ->
-                val tileBounds = tile.getBounds()
-                bitmaps.reversed().forEach { bitmap ->
-                    val topLeftPixel = map.toPixel(tileBounds.northWest)
-                    val topRightPixel = map.toPixel(tileBounds.northEast)
-                    val bottomRightPixel = map.toPixel(tileBounds.southEast)
-                    val bottomLeftPixel = map.toPixel(tileBounds.southWest)
-                    drawer.canvas.drawBitmapMesh(
-                        bitmap,
-                        1,
-                        1,
-                        floatArrayOf(
-                            bottomLeftPixel.x, bottomLeftPixel.y,
-                            bottomRightPixel.x, bottomRightPixel.y,
-                            topLeftPixel.x, topLeftPixel.y,
-                            topRightPixel.x, topRightPixel.y
-                        ),
-                        0,
-                        null,
-                        0,
-                        paint
-                    )
+
+            val zFilter = if (loader.tileCache.keys.map { it.z }.size > 1) {
+                loader.tileCache.keys.maxOf { it.z }
+            } else {
+                loader.tileCache.keys.firstOrNull()?.z
+            }
+
+            loader.tileCache.entries.sortedBy { it.key.z }//.filter { it.key.z == zFilter }
+                .forEach { (tile, bitmaps) ->
+                    val tileBounds = tile.getBounds()
+                    bitmaps.reversed().forEach { bitmap ->
+                        val topLeftPixel = map.toPixel(tileBounds.northWest)
+                        val topRightPixel = map.toPixel(tileBounds.northEast)
+                        val bottomRightPixel = map.toPixel(tileBounds.southEast)
+                        val bottomLeftPixel = map.toPixel(tileBounds.southWest)
+                        drawer.canvas.drawBitmapMesh(
+                            bitmap,
+                            1,
+                            1,
+                            floatArrayOf(
+                                bottomLeftPixel.x, bottomLeftPixel.y,
+                                bottomRightPixel.x, bottomRightPixel.y,
+                                topLeftPixel.x, topLeftPixel.y,
+                                topRightPixel.x, topRightPixel.y
+                            ),
+                            0,
+                            null,
+                            0,
+                            paint
+                        )
+                    }
                 }
-            }
         }
     }
 
