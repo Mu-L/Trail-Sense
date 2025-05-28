@@ -49,6 +49,8 @@ import com.kylecorry.trail_sense.tools.beacons.infrastructure.BeaconNavigator
 import com.kylecorry.trail_sense.tools.beacons.infrastructure.IBeaconNavigator
 import com.kylecorry.trail_sense.tools.beacons.infrastructure.persistence.BeaconService
 import com.kylecorry.trail_sense.tools.maps.infrastructure.layers.ILayerManager
+import com.kylecorry.trail_sense.tools.maps.infrastructure.layers.MapLayer
+import com.kylecorry.trail_sense.tools.maps.infrastructure.layers.MapLayerManager
 import com.kylecorry.trail_sense.tools.maps.infrastructure.layers.MultiLayerManager
 import com.kylecorry.trail_sense.tools.maps.infrastructure.layers.MyAccuracyLayerManager
 import com.kylecorry.trail_sense.tools.maps.infrastructure.layers.MyLocationLayerManager
@@ -137,6 +139,7 @@ class PathOverviewFragment : BoundFragment<FragmentPathOverviewBinding>() {
     }
     private val myLocationLayer = MyLocationLayer()
     private val myAccuracyLayer = MyAccuracyLayer()
+    private val mapLayer = MapLayer()
 
     private val paceFactor = 1.75f
 
@@ -175,7 +178,8 @@ class PathOverviewFragment : BoundFragment<FragmentPathOverviewBinding>() {
                 MyLocationLayerManager(
                     myLocationLayer,
                     Resources.getPrimaryMarkerColor(requireContext())
-                )
+                ),
+                MapLayerManager(requireContext(), mapLayer)
             )
         )
         layerManager?.start()
@@ -297,9 +301,11 @@ class PathOverviewFragment : BoundFragment<FragmentPathOverviewBinding>() {
             layerManager?.onBearingChanged(compass.rawBearing)
         }
 
+        mapLayer.setOpacity(127)
+        mapLayer.setReplaceWhitePixels(true)
         waypointLayer.setOutlineColor(Color.TRANSPARENT)
         binding.pathImage.setLayers(
-            listOf(pathLayer, waypointLayer, myAccuracyLayer, myLocationLayer)
+            listOf(mapLayer, pathLayer, waypointLayer, myAccuracyLayer, myLocationLayer)
         )
 
         binding.pathLineStyle.setOnClickListener {

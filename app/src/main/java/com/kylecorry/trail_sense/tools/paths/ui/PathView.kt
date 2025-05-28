@@ -39,6 +39,7 @@ class PathView(context: Context, attrs: AttributeSet? = null) : CanvasView(conte
 
     private val layers = mutableListOf<ILayer>()
 
+    // TODO: This isn't correct (doesn't represent the bounds of the view)
     override val mapBounds: CoordinateBounds
         get() = bounds ?: CoordinateBounds.empty
 
