@@ -37,4 +37,8 @@ class NavigationLayer : BaseLayer() {
         drawer.strokeWeight(6f / scale)
         drawer.line(p1.x, p1.y, p2.x, p2.y)
     }
+
+    override fun setValue(key: String, value: Any?) {
+        // TODO: IMPLEMENT SET VALUE
+    }
 }

@@ -185,6 +185,10 @@ class PathLayer : ILayer, IPathLayer {
         return false
     }
 
+    override fun setValue(key: String, value: Any?) {
+        // TODO: IMPLEMENT SET VALUE
+    }
+
     private fun getBounds(drawer: ICanvasDrawer): Rectangle {
         // Rotating by map rotation wasn't working around 90/270 degrees - this is a workaround
         // It will just render slightly more of the path than needed, but never less (since 45 is when the area is at its largest)

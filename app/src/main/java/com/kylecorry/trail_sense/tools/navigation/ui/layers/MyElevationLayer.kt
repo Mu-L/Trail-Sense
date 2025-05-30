@@ -83,6 +83,10 @@ class MyElevationLayer(
         return false
     }
 
+    override fun setValue(key: String, value: Any?) {
+        // TODO: IMPLEMENT SET VALUE
+    }
+
     protected fun finalize() {
         bitmapLoader.clear()
     }

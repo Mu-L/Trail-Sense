@@ -65,6 +65,10 @@ class MyAccuracyLayer : BaseLayer() {
         super.draw(drawer, map)
     }
 
+    override fun setValue(key: String, value: Any?) {
+        // TODO: IMPLEMENT SET VALUE
+    }
+
     private fun updateMarker(drawer: ICanvasDrawer, map: IMapView){
         val accuracy = _accuracy ?: return
         val location = _location ?: return

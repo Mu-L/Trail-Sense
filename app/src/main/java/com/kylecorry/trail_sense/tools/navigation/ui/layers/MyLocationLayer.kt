@@ -47,6 +47,10 @@ class MyLocationLayer : BaseLayer() {
         super.draw(drawer, map)
     }
 
+    override fun setValue(key: String, value: Any?) {
+        // TODO: IMPLEMENT SET VALUE
+    }
+
     private fun drawCircle(map: IMapView) {
         clearMarkers()
         addMarker(

@@ -115,6 +115,10 @@ class MapDistanceLayer(private val onPathChanged: (points: List<Coordinate>) -> 
         return true
     }
 
+    override fun setValue(key: String, value: Any?) {
+        // TODO: IMPLEMENT SET VALUE
+    }
+
     private fun updateLayers() {
         pointLayer.setBeacons(getBeacons())
         pathLayer.setPaths(listOf(getPath()))

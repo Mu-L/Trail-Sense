@@ -26,4 +26,9 @@ interface ILayer {
      * @return true if the click event was handled by this layer, false otherwise
      */
     fun onClick(drawer: ICanvasDrawer, map: IMapView, pixel: PixelCoordinate): Boolean
+
+    /**
+     * Set a value on the layer
+     */
+    fun setValue(key: String, value: Any?)
 }

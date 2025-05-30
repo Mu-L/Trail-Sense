@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.core.os.bundleOf
 import com.kylecorry.trail_sense.R
 import com.kylecorry.trail_sense.shared.extensions.findNavController
+import com.kylecorry.trail_sense.tools.maps.infrastructure.layers.MapLayer
+import com.kylecorry.trail_sense.tools.maps.infrastructure.layers.MapLayerManager
 import com.kylecorry.trail_sense.tools.maps.quickactions.QuickActionOpenPhotoMap
 import com.kylecorry.trail_sense.tools.tools.infrastructure.Tool
 import com.kylecorry.trail_sense.tools.tools.infrastructure.ToolCategory
 import com.kylecorry.trail_sense.tools.tools.infrastructure.ToolIntentHandler
+import com.kylecorry.trail_sense.tools.tools.infrastructure.ToolMapLayer
 import com.kylecorry.trail_sense.tools.tools.infrastructure.ToolQuickAction
 import com.kylecorry.trail_sense.tools.tools.infrastructure.ToolRegistration
 import com.kylecorry.trail_sense.tools.tools.infrastructure.Tools
@@ -53,7 +56,17 @@ object PhotoMapsToolRegistration : ToolRegistration {
                 ToolDiagnosticFactory.camera(context),
                 *ToolDiagnosticFactory.compass(context)
             ).distinctBy { it.id },
-            intentHandlers = listOf(importMapIntentHandler)
+            intentHandlers = listOf(importMapIntentHandler),
+            mapLayers = listOf(
+                ToolMapLayer(
+                    MAP_LAYER_PHOTO_MAPS,
+                    context.getString(R.string.photo_maps),
+                    ::MapLayer,
+                    { context, layer -> MapLayerManager(context, layer as MapLayer) }
+                )
+            )
         )
     }
+
+    const val MAP_LAYER_PHOTO_MAPS = "photo-maps-map-layer-photo-maps"
 }

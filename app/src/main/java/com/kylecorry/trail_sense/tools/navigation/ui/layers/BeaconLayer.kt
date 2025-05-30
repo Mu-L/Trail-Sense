@@ -54,6 +54,10 @@ class BeaconLayer(
         super.draw(drawer, map)
     }
 
+    override fun setValue(key: String, value: Any?) {
+        // TODO: IMPLEMENT SET VALUE
+    }
+
     protected fun finalize() {
         _loader?.clear()
         _loader = null

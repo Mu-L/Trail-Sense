@@ -121,6 +121,10 @@ class MapLayer : ILayer {
         return false
     }
 
+    override fun setValue(key: String, value: Any?) {
+        // TODO: IMPLEMENT SET VALUE
+    }
+
     private fun areBoundsEqual(bounds1: CoordinateBounds, bound2: CoordinateBounds): Boolean {
         return bounds1.north == bound2.north &&
                 bounds1.south == bound2.south &&
