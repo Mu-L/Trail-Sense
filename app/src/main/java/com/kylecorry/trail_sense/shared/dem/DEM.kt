@@ -13,6 +13,7 @@ import com.kylecorry.sol.science.geology.CoordinateBounds
 import com.kylecorry.sol.units.Coordinate
 import com.kylecorry.sol.units.Distance
 import com.kylecorry.trail_sense.shared.ProguardIgnore
+import com.kylecorry.trail_sense.shared.UserPreferences
 import com.kylecorry.trail_sense.shared.data.GeographicImageSource
 import com.kylecorry.trail_sense.shared.io.FileSubsystem
 
@@ -91,11 +92,22 @@ object DEM {
         return true
     }
 
+    fun isExternalModelLoaded(): Boolean {
+        val files = AppServiceRegistry.get<FileSubsystem>()
+        return files.get("dem/index.json").exists()
+    }
+
+    fun isUsingExternalModel(): Boolean {
+        val prefs = AppServiceRegistry.get<UserPreferences>()
+        return !prefs.altimeter.alwaysUseBuiltInDEM && isExternalModelLoaded()
+    }
+
     private suspend fun loadIndex() = onIO {
         val files = AppServiceRegistry.get<FileSubsystem>()
+        val prefs = AppServiceRegistry.get<UserPreferences>()
         val index = files.get("dem/index.json")
         var json = ""
-        json = if (!index.exists()) {
+        json = if (prefs.altimeter.alwaysUseBuiltInDEM || !index.exists()) {
             useDefaultModel = true
             files.streamAsset("dem/index.json")?.use { it.readUntil { false } } ?: ""
         } else {

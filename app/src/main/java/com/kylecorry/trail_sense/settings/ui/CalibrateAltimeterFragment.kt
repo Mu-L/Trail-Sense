@@ -205,8 +205,11 @@ class CalibrateAltimeterFragment : AndromedaPreferenceFragment() {
                 mode == UserPreferences.AltimeterMode.DigitalElevationModelBarometer
 
         demPref.isVisible = isModeDem && prefs.altimeter.isDigitalElevationModelAvailable
-        demPref.summary =
-            if (DEM.isAvailable()) getString(R.string.loaded) else getString(R.string.not_set)
+        demPref.summary = if (DEM.isUsingExternalModel()) {
+            getString(R.string.external)
+        } else {
+            getString(R.string.built_in_low_accuracy)
+        }
 
         // Calibration mode options
         val options = listOfNotNull(
@@ -389,27 +392,55 @@ class CalibrateAltimeterFragment : AndromedaPreferenceFragment() {
     }
 
     private fun loadDEM() {
-        inBackground(state = BackgroundMinimumState.Created) {
-            val source = IntentUriPicker(
-                this@CalibrateAltimeterFragment,
-                requireContext()
-            ).open(listOf("application/zip")) ?: return@inBackground
+        Pickers.item(
+            requireContext(), getString(R.string.plugin_digital_elevation_model), listOf(
+                getString(R.string.built_in_low_accuracy),
+                getString(R.string.external)
+            ), defaultSelectedIndex = if (DEM.isUsingExternalModel()) 1 else 0
+        ) {
+            it ?: return@item
 
-            val loader = DigitalElevationModelLoader()
-            try {
-                Alerts.withLoading(requireContext(), getString(R.string.loading)) {
-                    loader.load(source)
-                    onMain {
-                        onAltimeterModeChanged()
-                        toast(getString(R.string.loaded))
+            if (it == 1) {
+                // TODO: Separate button to load a new external model
+                if (DEM.isExternalModelLoaded()) {
+                    stopAltimeter()
+                    prefs.altimeter.alwaysUseBuiltInDEM = false
+                    DEM.invalidateCache()
+                    onAltimeterModeChanged()
+                } else {
+                    inBackground(state = BackgroundMinimumState.Created) {
+                        val source = IntentUriPicker(
+                            this@CalibrateAltimeterFragment,
+                            requireContext()
+                        ).open(listOf("application/zip")) ?: return@inBackground
+
+                        val loader = DigitalElevationModelLoader()
+                        try {
+                            Alerts.withLoading(requireContext(), getString(R.string.loading)) {
+                                stopAltimeter()
+                                loader.load(source)
+                                onMain {
+                                    onAltimeterModeChanged()
+                                    toast(getString(R.string.loaded))
+                                }
+                            }
+                        } catch (_: Exception) {
+                            onMain {
+                                toast(getString(R.string.invalid_dem_file))
+                            }
+                        }
                     }
                 }
-            } catch (_: Exception) {
-                onMain {
-                    toast(getString(R.string.invalid_dem_file))
-                }
+            } else {
+                // TODO: Save the source rather than delete and give a separate button to delete
+                stopAltimeter()
+                prefs.altimeter.alwaysUseBuiltInDEM = true
+                DEM.invalidateCache()
+                onAltimeterModeChanged()
             }
         }
+
+
     }
 
 }

@@ -3,14 +3,12 @@ package com.kylecorry.trail_sense.shared.sensors.altimeter
 import android.content.Context
 import android.util.Log
 import com.kylecorry.andromeda.core.cache.AppServiceRegistry
-import com.kylecorry.andromeda.core.cache.GeospatialCache
 import com.kylecorry.andromeda.core.sensors.AbstractSensor
 import com.kylecorry.andromeda.sense.location.IGPS
 import com.kylecorry.luna.coroutines.CoroutineQueueRunner
 import com.kylecorry.luna.coroutines.onMain
 import com.kylecorry.sol.units.Bearing
 import com.kylecorry.sol.units.Coordinate
-import com.kylecorry.sol.units.Distance
 import com.kylecorry.sol.units.Speed
 import com.kylecorry.trail_sense.shared.UserPreferences
 import com.kylecorry.trail_sense.shared.dem.DEM
@@ -38,9 +36,7 @@ class DigitalElevationModel(private val context: Context, private val gps: IGPS)
                     val gpsAltitude = gps.altitude
                     val gpsIsValid = gps.hasValidReading
                     demAltitude = if (hasDEM()) {
-                        cache.getOrPut(location) {
-                            DEM.getElevation(location) ?: Distance.meters(0f)
-                        }.meters().distance
+                        DEM.getElevation(location)?.meters()?.distance ?: 0f
                     } else {
                         gpsAltitude
                     }
@@ -100,8 +96,4 @@ class DigitalElevationModel(private val context: Context, private val gps: IGPS)
         get() = gps.time
     override val speed: Speed
         get() = gps.speed
-
-    companion object {
-        private val cache = GeospatialCache<Distance>(Distance.meters(100f), size = 100)
-    }
 }

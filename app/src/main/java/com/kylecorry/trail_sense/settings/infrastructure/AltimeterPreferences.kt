@@ -24,4 +24,10 @@ class AltimeterPreferences(context: Context) : PreferenceRepo(context) {
     val isDigitalElevationModelAvailable: Boolean
         get() = isDebug()
 
+    var alwaysUseBuiltInDEM by BooleanPreference(
+        cache,
+        context.getString(R.string.pref_altimeter_always_use_builtin_dem),
+        false
+    )
+
 }

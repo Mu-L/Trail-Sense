@@ -1730,4 +1730,7 @@
     <string name="loaded">Loaded</string>
     <!--DEM = Digital Elevation Model-->
     <string name="invalid_dem_file">Invalid DEM file</string>
+    <string name="built_in_low_accuracy">Built-in (low accuracy)</string>
+    <string name="external">External</string>
+    <string name="pref_altimeter_always_use_builtin_dem">pref_altimeter_always_use_builtin_dem</string>
 </resources>
