@@ -1,1886 +1,1897 @@
 {
-    "resolution_arc_seconds": 240,
+    "resolution_arc_seconds": 75,
     "files": [
         {
             "filename": "S45W090.webp",
-            "a": 0.05970945209264755,
-            "b": 3401.051513671875,
+            "a": 0.0660838782787323,
+            "b": 2985.4140625,
             "latitude_start": -45.0,
             "longitude_start": -90.0,
             "latitude_end": -60.0,
             "longitude_end": -75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45W075.webp",
-            "a": 0.046827029436826706,
-            "b": 2246.0,
+            "a": 0.04823949560523033,
+            "b": 1390.340087890625,
             "latitude_start": -45.0,
             "longitude_start": -75.0,
             "latitude_end": -60.0,
             "longitude_end": -60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45W060.webp",
-            "a": 0.20747199654579163,
-            "b": 627.0,
+            "a": 0.2567141056060791,
+            "b": 401.0,
             "latitude_start": -45.0,
             "longitude_start": -60.0,
             "latitude_end": -60.0,
             "longitude_end": -45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45W045.webp",
-            "a": 0.05568671226501465,
-            "b": 1958.916259765625,
+            "a": 0.0804419070482254,
+            "b": 479.9991149902344,
             "latitude_start": -45.0,
             "longitude_start": -45.0,
             "latitude_end": -60.0,
             "longitude_end": -30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45W030.webp",
-            "a": 0.06049628555774689,
-            "b": 3334.0,
+            "a": 0.06382978707551956,
+            "b": 3076.0,
             "latitude_start": -45.0,
             "longitude_start": -30.0,
             "latitude_end": -60.0,
             "longitude_end": -15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45E000.webp",
-            "a": 0.1066516786813736,
-            "b": 2069.0,
+            "a": 0.1393270194530487,
+            "b": 1205.0,
             "latitude_start": -45.0,
             "longitude_start": 0.0,
             "latitude_end": -60.0,
             "longitude_end": 15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45E030.webp",
-            "a": 0.05182968080043793,
-            "b": 3787.0,
+            "a": 0.07453528046607971,
+            "b": 2261.0,
             "latitude_start": -45.0,
             "longitude_start": 30.0,
             "latitude_end": -60.0,
             "longitude_end": 45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45E045.webp",
-            "a": 0.08240405470132828,
-            "b": 2328.0,
+            "a": 0.12807230651378632,
+            "b": 1195.0,
             "latitude_start": -45.0,
             "longitude_start": 45.0,
             "latitude_end": -60.0,
             "longitude_end": 60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45E060.webp",
-            "a": 0.07113896310329437,
-            "b": 1348.3592529296875,
+            "a": 0.08934853225946426,
+            "b": 514.5199584960938,
             "latitude_start": -45.0,
             "longitude_start": 60.0,
             "latitude_end": -60.0,
             "longitude_end": 75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45E150.webp",
-            "a": 0.044538721442222595,
-            "b": 5473.0,
+            "a": 0.07609548419713974,
+            "b": 3028.0,
             "latitude_start": -45.0,
             "longitude_start": 150.0,
             "latitude_end": -60.0,
             "longitude_end": 165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S45E165.webp",
-            "a": 0.0458003394305706,
-            "b": 3705.0,
+            "a": 0.06384790688753128,
+            "b": 2041.0,
             "latitude_start": -45.0,
             "longitude_start": 165.0,
             "latitude_end": -60.0,
             "longitude_end": 180.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30W180.webp",
-            "a": 0.2517711818218231,
-            "b": 768.0,
+            "a": 0.6210303902626038,
+            "b": 129.0,
             "latitude_start": -30.0,
             "longitude_start": -180.0,
             "latitude_end": -45.0,
             "longitude_end": -165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30W090.webp",
-            "a": 0.062331948429346085,
-            "b": 3698.0,
+            "a": 0.06589723378419876,
+            "b": 2725.0,
             "latitude_start": -30.0,
             "longitude_start": -90.0,
             "latitude_end": -45.0,
             "longitude_end": -75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30W075.webp",
-            "a": 0.02677196078002453,
-            "b": 3227.744873046875,
+            "a": 0.033129509538412094,
+            "b": 1185.0,
             "latitude_start": -30.0,
             "longitude_start": -75.0,
             "latitude_end": -45.0,
             "longitude_end": -60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30W060.webp",
-            "a": 0.32728511095046997,
-            "b": 297.0,
+            "a": 0.2816861867904663,
+            "b": 357.0,
             "latitude_start": -30.0,
             "longitude_start": -60.0,
             "latitude_end": -45.0,
             "longitude_end": -45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30W015.webp",
-            "a": 0.04788100719451904,
-            "b": 3743.0,
+            "a": 0.055425770580768585,
+            "b": 2895.0,
             "latitude_start": -30.0,
             "longitude_start": -15.0,
             "latitude_end": -45.0,
             "longitude_end": 0.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30E015.webp",
-            "a": 0.05114809423685074,
-            "b": 2199.0,
+            "a": 0.07719115912914276,
+            "b": 313.0,
             "latitude_start": -30.0,
             "longitude_start": 15.0,
             "latitude_end": -45.0,
             "longitude_end": 30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30E030.webp",
-            "a": 0.06627408415079117,
-            "b": 2584.236572265625,
+            "a": 0.17420615255832672,
+            "b": 131.0,
             "latitude_start": -30.0,
             "longitude_start": 30.0,
             "latitude_end": -45.0,
             "longitude_end": 45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30E075.webp",
-            "a": 0.07860665768384933,
-            "b": 2697.0,
+            "a": 0.09637632220983505,
+            "b": 1917.0,
             "latitude_start": -30.0,
             "longitude_start": 75.0,
             "latitude_end": -45.0,
             "longitude_end": 90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30E105.webp",
-            "a": 0.19822780787944794,
-            "b": 697.4381713867188,
+            "a": 0.2465207278728485,
+            "b": 232.0,
             "latitude_start": -30.0,
             "longitude_start": 105.0,
             "latitude_end": -45.0,
             "longitude_end": 120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30E120.webp",
-            "a": 0.40559840202331543,
-            "b": 104.0,
+            "a": 0.3646407425403595,
+            "b": 168.0,
             "latitude_start": -30.0,
             "longitude_start": 120.0,
             "latitude_end": -45.0,
             "longitude_end": 135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30E135.webp",
-            "a": 0.06940169632434845,
-            "b": 1754.0,
+            "a": 0.10837823897600174,
+            "b": 207.0,
             "latitude_start": -30.0,
             "longitude_start": 135.0,
             "latitude_end": -45.0,
             "longitude_end": 150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30E150.webp",
-            "a": 0.057140495628118515,
-            "b": 2980.0,
+            "a": 0.1106368750333786,
+            "b": 758.0,
             "latitude_start": -30.0,
             "longitude_start": 150.0,
             "latitude_end": -45.0,
             "longitude_end": 165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S30E165.webp",
-            "a": 0.04803558439016342,
-            "b": 2652.0,
+            "a": 0.05726709961891174,
+            "b": 1340.0,
             "latitude_start": -30.0,
             "longitude_start": 165.0,
             "latitude_end": -45.0,
             "longitude_end": 180.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W180.webp",
-            "a": 0.04373423010110855,
-            "b": 4810.384765625,
+            "a": 0.05389436334371567,
+            "b": 3664.0,
             "latitude_start": -15.0,
             "longitude_start": -180.0,
             "latitude_end": -30.0,
             "longitude_end": -165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W165.webp",
-            "a": 0.04612740874290466,
-            "b": 5146.0,
+            "a": 0.044957686215639114,
+            "b": 4650.0,
             "latitude_start": -15.0,
             "longitude_start": -165.0,
             "latitude_end": -30.0,
             "longitude_end": -150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W150.webp",
-            "a": 0.038173653185367584,
-            "b": 4683.0,
+            "a": 0.04091127961874008,
+            "b": 3459.0,
             "latitude_start": -15.0,
             "longitude_start": -150.0,
             "latitude_end": -30.0,
             "longitude_end": -135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W135.webp",
-            "a": 0.062096890062093735,
-            "b": 3970.0,
+            "a": 0.0455438457429409,
+            "b": 2978.0,
             "latitude_start": -15.0,
             "longitude_start": -135.0,
             "latitude_end": -30.0,
             "longitude_end": -120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W120.webp",
-            "a": 0.06909141689538956,
-            "b": 3340.853515625,
+            "a": 0.09186404943466187,
+            "b": 2372.719970703125,
             "latitude_start": -15.0,
             "longitude_start": -120.0,
             "latitude_end": -30.0,
             "longitude_end": -105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W090.webp",
-            "a": 0.09961648285388947,
-            "b": 1420.2373046875,
+            "a": 0.06674812734127045,
+            "b": 2396.0,
             "latitude_start": -15.0,
             "longitude_start": -90.0,
             "latitude_end": -30.0,
             "longitude_end": -75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W075.webp",
-            "a": 0.02566993236541748,
-            "b": 3446.0,
+            "a": 0.03128190338611603,
+            "b": 1507.0,
             "latitude_start": -15.0,
             "longitude_start": -75.0,
             "latitude_end": -30.0,
             "longitude_end": -60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W060.webp",
-            "a": 0.11502929031848907,
-            "b": 270.0,
+            "a": 0.10768862068653107,
+            "b": 276.0,
             "latitude_start": -15.0,
             "longitude_start": -60.0,
             "latitude_end": -30.0,
             "longitude_end": -45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W045.webp",
-            "a": 0.06745040416717529,
-            "b": 1239.0,
+            "a": 0.08630865067243576,
+            "b": 233.0,
             "latitude_start": -15.0,
             "longitude_start": -45.0,
             "latitude_end": -30.0,
             "longitude_end": -30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W030.webp",
-            "a": 0.05157766863703728,
-            "b": 4944.0,
+            "a": 0.032692309468984604,
+            "b": 3911.0,
             "latitude_start": -15.0,
             "longitude_start": -30.0,
             "latitude_end": -30.0,
             "longitude_end": -15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15W015.webp",
-            "a": 0.03947979584336281,
-            "b": 4473.0,
+            "a": 0.04341903701424599,
+            "b": 3183.0,
             "latitude_start": -15.0,
             "longitude_start": -15.0,
             "latitude_end": -30.0,
             "longitude_end": 0.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E000.webp",
-            "a": 0.06810607761144638,
-            "b": 1442.0,
+            "a": 0.08114253729581833,
+            "b": 713.0,
             "latitude_start": -15.0,
             "longitude_start": 0.0,
             "latitude_end": -30.0,
             "longitude_end": 15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E015.webp",
-            "a": 0.0739656537771225,
-            "b": 186.0,
+            "a": 0.07195358723402023,
+            "b": 132.0,
             "latitude_start": -15.0,
             "longitude_start": 15.0,
             "latitude_end": -30.0,
             "longitude_end": 30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E030.webp",
-            "a": 0.04012657701969147,
-            "b": 4003.0,
+            "a": 0.04640574753284454,
+            "b": 2667.0,
             "latitude_start": -15.0,
             "longitude_start": 30.0,
             "latitude_end": -30.0,
             "longitude_end": 45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E045.webp",
-            "a": 0.037585679441690445,
-            "b": 4320.0,
+            "a": 0.044268444180488586,
+            "b": 3102.0,
             "latitude_start": -15.0,
             "longitude_start": 45.0,
             "latitude_end": -30.0,
             "longitude_end": 60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E060.webp",
-            "a": 0.07185213267803192,
-            "b": 3281.0,
+            "a": 0.3759514391422272,
+            "b": 372.0,
             "latitude_start": -15.0,
             "longitude_start": 60.0,
             "latitude_end": -30.0,
             "longitude_end": 75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E105.webp",
-            "a": 0.11907432973384857,
-            "b": 1143.0,
+            "a": 0.1858861893415451,
+            "b": 232.0,
             "latitude_start": -15.0,
             "longitude_start": 105.0,
             "latitude_end": -30.0,
             "longitude_end": 120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E120.webp",
-            "a": 0.2016921043395996,
-            "b": 71.0,
+            "a": 0.19003497064113617,
+            "b": 83.0,
             "latitude_start": -15.0,
             "longitude_start": 120.0,
             "latitude_end": -30.0,
             "longitude_end": 135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E135.webp",
-            "a": 0.1999274492263794,
-            "b": 74.99164581298828,
+            "a": 0.1710641235113144,
+            "b": 68.9127426147461,
             "latitude_start": -15.0,
             "longitude_start": 135.0,
             "latitude_end": -30.0,
             "longitude_end": 150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E150.webp",
-            "a": 0.05777132883667946,
-            "b": 3020.0,
+            "a": 0.06190943345427513,
+            "b": 2720.54541015625,
             "latitude_start": -15.0,
             "longitude_start": 150.0,
             "latitude_end": -30.0,
             "longitude_end": 165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "S15E165.webp",
-            "a": 0.042739443480968475,
-            "b": 4578.0,
+            "a": 0.050148457288742065,
+            "b": 3438.0,
             "latitude_start": -15.0,
             "longitude_start": 165.0,
             "latitude_end": -30.0,
             "longitude_end": 180.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00W180.webp",
-            "a": 0.03336565941572189,
-            "b": 5981.0,
+            "a": 0.04244498908519745,
+            "b": 4255.6552734375,
             "latitude_start": 0.0,
             "longitude_start": -180.0,
             "latitude_end": -15.0,
             "longitude_end": -165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00W165.webp",
-            "a": 0.0463973805308342,
-            "b": 5294.0,
+            "a": 0.042627882212400436,
+            "b": 4358.0,
             "latitude_start": 0.0,
             "longitude_start": -165.0,
             "latitude_end": -15.0,
             "longitude_end": -150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00W150.webp",
-            "a": 0.04737571254372597,
-            "b": 4623.0,
+            "a": 0.05792851746082306,
+            "b": 3309.0,
             "latitude_start": 0.0,
             "longitude_start": -150.0,
             "latitude_end": -15.0,
             "longitude_end": -135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00W105.webp",
-            "a": 0.05248134583234787,
-            "b": 3651.74658203125,
+            "a": 0.05296640843153,
+            "b": 3226.9619140625,
             "latitude_start": 0.0,
             "longitude_start": -105.0,
             "latitude_end": -15.0,
             "longitude_end": -90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00W090.webp",
-            "a": 0.029061494395136833,
-            "b": 3219.914794921875,
+            "a": 0.03389912471175194,
+            "b": 1421.0,
             "latitude_start": 0.0,
             "longitude_start": -90.0,
             "latitude_end": -15.0,
             "longitude_end": -75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00W075.webp",
-            "a": 0.04456235468387604,
+            "a": 0.04397799074649811,
             "b": -11.0,
             "latitude_start": 0.0,
             "longitude_start": -75.0,
             "latitude_end": -15.0,
             "longitude_end": -60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00W060.webp",
-            "a": 0.1513286828994751,
-            "b": 149.0,
+            "a": 0.140211820602417,
+            "b": 192.0,
             "latitude_start": 0.0,
             "longitude_start": -60.0,
             "latitude_end": -15.0,
             "longitude_end": -45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00W045.webp",
-            "a": 0.04184257984161377,
-            "b": 4237.0,
+            "a": 0.051051050424575806,
+            "b": 2876.0,
             "latitude_start": 0.0,
             "longitude_start": -45.0,
             "latitude_end": -15.0,
             "longitude_end": -30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00W015.webp",
-            "a": 0.06858519464731216,
-            "b": 3456.0,
+            "a": 0.04585254564881325,
+            "b": 4958.0,
             "latitude_start": 0.0,
             "longitude_start": -15.0,
             "latitude_end": -15.0,
             "longitude_end": 0.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E000.webp",
-            "a": 0.04422975331544876,
-            "b": 3478.0,
+            "a": 0.03405291587114334,
+            "b": 4968.0,
             "latitude_start": 0.0,
             "longitude_start": 0.0,
             "latitude_end": -15.0,
             "longitude_end": 15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E015.webp",
-            "a": 0.07719510048627853,
-            "b": -260.7036437988281,
+            "a": 0.0644242987036705,
+            "b": -229.5803985595703,
             "latitude_start": 0.0,
             "longitude_start": 15.0,
             "latitude_end": -15.0,
             "longitude_end": 30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E030.webp",
-            "a": 0.031880248337984085,
-            "b": 3514.0,
+            "a": 0.030397331342101097,
+            "b": 2701.0,
             "latitude_start": 0.0,
             "longitude_start": 30.0,
             "latitude_end": -15.0,
             "longitude_end": 45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E045.webp",
-            "a": 0.03740106150507927,
-            "b": 4404.0,
+            "a": 0.04309205338358879,
+            "b": 3197.0,
             "latitude_start": 0.0,
             "longitude_start": 45.0,
             "latitude_end": -15.0,
             "longitude_end": 60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E060.webp",
-            "a": 0.07205425202846527,
-            "b": 3479.0,
+            "a": 0.10003922879695892,
+            "b": 2429.0,
             "latitude_start": 0.0,
             "longitude_start": 60.0,
             "latitude_end": -15.0,
             "longitude_end": 75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E090.webp",
-            "a": 0.034714628010988235,
-            "b": 4914.0,
+            "a": 0.03863212838768959,
+            "b": 3009.0,
             "latitude_start": 0.0,
             "longitude_start": 90.0,
             "latitude_end": -15.0,
             "longitude_end": 105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E105.webp",
-            "a": 0.031182190403342247,
-            "b": 5244.0,
+            "a": 0.0347769632935524,
+            "b": 3955.0,
             "latitude_start": 0.0,
             "longitude_start": 105.0,
             "latitude_end": -15.0,
             "longitude_end": 120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E120.webp",
-            "a": 0.028768982738256454,
-            "b": 6033.0,
+            "a": 0.03653937205672264,
+            "b": 3812.0,
             "latitude_start": 0.0,
             "longitude_start": 120.0,
             "latitude_end": -15.0,
             "longitude_end": 135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E135.webp",
-            "a": 0.02801334485411644,
-            "b": 4807.67919921875,
+            "a": 0.035447362810373306,
+            "b": 2633.19775390625,
             "latitude_start": 0.0,
             "longitude_start": 135.0,
             "latitude_end": -15.0,
             "longitude_end": 150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E150.webp",
-            "a": 0.03169431909918785,
-            "b": 5869.0,
+            "a": 0.04420464113354683,
+            "b": 3167.0,
             "latitude_start": 0.0,
             "longitude_start": 150.0,
             "latitude_end": -15.0,
             "longitude_end": 165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N00E165.webp",
-            "a": 0.037348613142967224,
-            "b": 5721.0,
+            "a": 0.044879816472530365,
+            "b": 4443.0,
             "latitude_start": 0.0,
             "longitude_start": 165.0,
             "latitude_end": -15.0,
             "longitude_end": 180.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
+        },
+        {
+            "filename": "N15W180.webp",
+            "a": 0.06732813268899918,
+            "b": 3783.838134765625,
+            "latitude_start": 15.0,
+            "longitude_start": -180.0,
+            "latitude_end": 0.0,
+            "longitude_end": -165.0,
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15W165.webp",
-            "a": 0.05955161154270172,
-            "b": 4187.0,
+            "a": 0.08201994001865387,
+            "b": 2854.0,
             "latitude_start": 15.0,
             "longitude_start": -165.0,
             "latitude_end": 0.0,
             "longitude_end": -150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15W120.webp",
-            "a": 0.07325480878353119,
-            "b": 3476.0,
+            "a": 0.10585305094718933,
+            "b": 2375.0,
             "latitude_start": 15.0,
             "longitude_start": -120.0,
             "latitude_end": 0.0,
             "longitude_end": -105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15W105.webp",
-            "a": 0.03914390131831169,
-            "b": 3265.057861328125,
+            "a": 0.040877752006053925,
+            "b": 2706.255126953125,
             "latitude_start": 15.0,
             "longitude_start": -105.0,
             "latitude_end": 0.0,
             "longitude_end": -90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15W090.webp",
-            "a": 0.03032071515917778,
-            "b": 3728.0,
+            "a": 0.033769115805625916,
+            "b": 2163.0,
             "latitude_start": 15.0,
             "longitude_start": -90.0,
             "latitude_end": 0.0,
             "longitude_end": -75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15W075.webp",
-            "a": 0.027936218306422234,
-            "b": 4030.0,
+            "a": 0.028871580958366394,
+            "b": 3718.0,
             "latitude_start": 15.0,
             "longitude_start": -75.0,
             "latitude_end": 0.0,
             "longitude_end": -60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15W060.webp",
-            "a": 0.06652884930372238,
-            "b": 2535.626953125,
+            "a": 0.06362978368997574,
+            "b": 2036.60693359375,
             "latitude_start": 15.0,
             "longitude_start": -60.0,
             "latitude_end": 0.0,
             "longitude_end": -45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15W030.webp",
-            "a": 0.043683819472789764,
-            "b": 4107.0,
+            "a": 0.041033707559108734,
+            "b": 3580.0,
             "latitude_start": 15.0,
             "longitude_start": -30.0,
             "latitude_end": 0.0,
             "longitude_end": -15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15W015.webp",
-            "a": 0.06053876876831055,
-            "b": 2592.0,
+            "a": 0.03861378878355026,
+            "b": 4943.0,
             "latitude_start": 15.0,
             "longitude_start": -15.0,
             "latitude_end": 0.0,
             "longitude_end": 0.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E000.webp",
-            "a": 0.03966427594423294,
-            "b": 3017.0,
+            "a": 0.02874704636633396,
+            "b": 4993.0,
             "latitude_start": 15.0,
             "longitude_start": 0.0,
             "latitude_end": 0.0,
             "longitude_end": 15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E015.webp",
-            "a": 0.05923260375857353,
-            "b": -271.4319152832031,
+            "a": 0.060965750366449356,
+            "b": -269.1480407714844,
             "latitude_start": 15.0,
             "longitude_start": 15.0,
             "latitude_end": 0.0,
             "longitude_end": 30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E030.webp",
-            "a": 0.04215102270245552,
-            "b": 1645.30419921875,
+            "a": 0.04549649730324745,
+            "b": 1293.216552734375,
             "latitude_start": 15.0,
             "longitude_start": 30.0,
             "latitude_end": 0.0,
             "longitude_end": 45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E045.webp",
-            "a": 0.045158568769693375,
-            "b": 3314.0,
+            "a": 0.05436553433537483,
+            "b": 2311.0,
             "latitude_start": 15.0,
             "longitude_start": 45.0,
             "latitude_end": 0.0,
             "longitude_end": 60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E060.webp",
-            "a": 0.06531006097793579,
-            "b": 3189.0,
+            "a": 0.07257556170225143,
+            "b": 2500.0,
             "latitude_start": 15.0,
             "longitude_start": 60.0,
             "latitude_end": 0.0,
             "longitude_end": 75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E075.webp",
-            "a": 0.0402129590511322,
-            "b": 3908.346923828125,
+            "a": 0.05871206521987915,
+            "b": 1845.3399658203125,
             "latitude_start": 15.0,
             "longitude_start": 75.0,
             "latitude_end": 0.0,
             "longitude_end": 90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E090.webp",
-            "a": 0.03488895669579506,
-            "b": 4192.0,
+            "a": 0.03765447065234184,
+            "b": 3600.0,
             "latitude_start": 15.0,
             "longitude_start": 90.0,
             "latitude_end": 0.0,
             "longitude_end": 105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E105.webp",
-            "a": 0.03618071228265762,
-            "b": 4246.0,
+            "a": 0.03790729492902756,
+            "b": 2903.0,
             "latitude_start": 15.0,
             "longitude_start": 105.0,
             "latitude_end": 0.0,
             "longitude_end": 120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E120.webp",
-            "a": 0.024894770234823227,
-            "b": 7756.0,
+            "a": 0.03631829842925072,
+            "b": 4298.0,
             "latitude_start": 15.0,
             "longitude_start": 120.0,
             "latitude_end": 0.0,
             "longitude_end": 135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E135.webp",
-            "a": 0.030628768727183342,
-            "b": 8118.0,
+            "a": 0.0626131221652031,
+            "b": 3604.478515625,
             "latitude_start": 15.0,
             "longitude_start": 135.0,
             "latitude_end": 0.0,
             "longitude_end": 150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E150.webp",
-            "a": 0.0471947006881237,
-            "b": 5142.0,
+            "a": 0.04885057359933853,
+            "b": 4272.0,
             "latitude_start": 15.0,
             "longitude_start": 150.0,
             "latitude_end": 0.0,
             "longitude_end": 165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N15E165.webp",
-            "a": 0.04367934167385101,
-            "b": 4952.0,
+            "a": 0.061253905296325684,
+            "b": 3873.0,
             "latitude_start": 15.0,
             "longitude_start": 165.0,
             "latitude_end": 0.0,
             "longitude_end": 180.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30W180.webp",
-            "a": 0.05422070994973183,
-            "b": 4655.0,
+            "a": 0.06009748578071594,
+            "b": 3580.10595703125,
             "latitude_start": 30.0,
             "longitude_start": -180.0,
             "latitude_end": 15.0,
             "longitude_end": -165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30W165.webp",
-            "a": 0.02768334187567234,
-            "b": 5346.18017578125,
+            "a": 0.037203673273324966,
+            "b": 2701.59521484375,
             "latitude_start": 30.0,
             "longitude_start": -165.0,
             "latitude_end": 15.0,
             "longitude_end": -150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30W120.webp",
-            "a": 0.033748410642147064,
-            "b": 4493.5029296875,
+            "a": 0.0333930142223835,
+            "b": 4475.6796875,
             "latitude_start": 30.0,
             "longitude_start": -120.0,
             "latitude_end": 15.0,
             "longitude_end": -105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30W105.webp",
-            "a": 0.02663772739470005,
-            "b": 4745.8837890625,
+            "a": 0.03602346032857895,
+            "b": 1966.3245849609375,
             "latitude_start": 30.0,
             "longitude_start": -105.0,
             "latitude_end": 15.0,
             "longitude_end": -90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30W090.webp",
-            "a": 0.027109701186418533,
-            "b": 6797.0,
+            "a": 0.03585122153162956,
+            "b": 4401.0,
             "latitude_start": 30.0,
             "longitude_start": -90.0,
             "latitude_end": 15.0,
             "longitude_end": -75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30W075.webp",
-            "a": 0.03320924937725067,
-            "b": 5168.06787109375,
+            "a": 0.03419005125761032,
+            "b": 4511.0,
             "latitude_start": 30.0,
             "longitude_start": -75.0,
             "latitude_end": 15.0,
             "longitude_end": -60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30W030.webp",
-            "a": 0.042584214359521866,
-            "b": 3767.765380859375,
+            "a": 0.04254858195781708,
+            "b": 2770.0,
             "latitude_start": 30.0,
             "longitude_start": -30.0,
             "latitude_end": 15.0,
             "longitude_end": -15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30W015.webp",
-            "a": 0.058272842317819595,
-            "b": 2477.694580078125,
+            "a": 0.06454360485076904,
+            "b": 1787.635009765625,
             "latitude_start": 30.0,
             "longitude_start": -15.0,
             "latitude_end": 15.0,
             "longitude_end": 0.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E000.webp",
-            "a": 0.11157112568616867,
-            "b": -120.31502532958984,
+            "a": 0.10110162943601608,
+            "b": -118.07440185546875,
             "latitude_start": 30.0,
             "longitude_start": 0.0,
             "latitude_end": 15.0,
             "longitude_end": 15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E015.webp",
-            "a": 0.07524538040161133,
-            "b": 126.8547592163086,
+            "a": 0.07568934559822083,
+            "b": 130.08120727539062,
             "latitude_start": 30.0,
             "longitude_start": 15.0,
             "latitude_end": 15.0,
             "longitude_end": 30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E030.webp",
-            "a": 0.05186513438820839,
-            "b": 1786.0,
+            "a": 0.04895308241248131,
+            "b": 1770.0,
             "latitude_start": 30.0,
             "longitude_start": 30.0,
             "latitude_end": 15.0,
             "longitude_end": 45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E045.webp",
-            "a": 0.03552752733230591,
-            "b": 3215.0,
+            "a": 0.034490879625082016,
+            "b": 3026.0,
             "latitude_start": 30.0,
             "longitude_start": 45.0,
             "latitude_end": 15.0,
             "longitude_end": 60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E060.webp",
-            "a": 0.054500941187143326,
-            "b": 1699.0,
+            "a": 0.06521077454090118,
+            "b": 226.0,
             "latitude_start": 30.0,
             "longitude_start": 60.0,
             "latitude_end": 15.0,
             "longitude_end": 75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E075.webp",
-            "a": 0.027172403410077095,
-            "b": 1786.0,
+            "a": 0.02877221815288067,
+            "b": 277.0,
             "latitude_start": 30.0,
             "longitude_start": 75.0,
             "latitude_end": 15.0,
             "longitude_end": 90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E090.webp",
-            "a": 0.030157122761011124,
-            "b": 1353.0,
+            "a": 0.034182358533144,
+            "b": 262.0,
             "latitude_start": 30.0,
             "longitude_start": 90.0,
             "latitude_end": 15.0,
             "longitude_end": 105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E105.webp",
-            "a": 0.05521232262253761,
-            "b": 2517.0,
+            "a": 0.05885491147637367,
+            "b": 1961.0,
             "latitude_start": 30.0,
             "longitude_start": 105.0,
             "latitude_end": 15.0,
             "longitude_end": 120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E120.webp",
-            "a": 0.03177744522690773,
-            "b": 4697.0,
+            "a": 0.03647705167531967,
+            "b": 3341.0,
             "latitude_start": 30.0,
             "longitude_start": 120.0,
             "latitude_end": 15.0,
             "longitude_end": 135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E135.webp",
-            "a": 0.06617393344640732,
-            "b": 3538.0,
+            "a": 0.07327764481306076,
+            "b": 2734.486572265625,
             "latitude_start": 30.0,
             "longitude_start": 135.0,
             "latitude_end": 15.0,
             "longitude_end": 150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E150.webp",
-            "a": 0.046969976276159286,
-            "b": 5429.0,
+            "a": 0.06809078902006149,
+            "b": 3745.0,
             "latitude_start": 30.0,
             "longitude_start": 150.0,
             "latitude_end": 15.0,
             "longitude_end": 165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N30E165.webp",
-            "a": 0.05057516694068909,
-            "b": 5042.0,
+            "a": 0.08213154226541519,
+            "b": 3099.1630859375,
             "latitude_start": 30.0,
             "longitude_start": 165.0,
             "latitude_end": 15.0,
             "longitude_end": 180.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45W135.webp",
-            "a": 0.04704036936163902,
-            "b": 2515.91015625,
+            "a": 0.049061667174100876,
+            "b": 1033.47216796875,
             "latitude_start": 45.0,
             "longitude_start": -135.0,
             "latitude_end": 30.0,
             "longitude_end": -120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45W120.webp",
-            "a": 0.041425324976444244,
-            "b": 2017.17529296875,
+            "a": 0.042961809784173965,
+            "b": 1662.2952880859375,
             "latitude_start": 45.0,
             "longitude_start": -120.0,
             "latitude_end": 30.0,
             "longitude_end": -105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45W105.webp",
-            "a": 0.08018267154693604,
-            "b": 25.327041625976562,
+            "a": 0.06858928501605988,
+            "b": 22.62904930114746,
             "latitude_start": 45.0,
             "longitude_start": -105.0,
             "latitude_end": 30.0,
             "longitude_end": -90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45W090.webp",
-            "a": 0.12145376205444336,
-            "b": 163.0,
+            "a": 0.12176600098609924,
+            "b": 157.0,
             "latitude_start": 45.0,
             "longitude_start": -90.0,
             "latitude_end": 30.0,
             "longitude_end": -75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45W075.webp",
-            "a": 0.04940250143408775,
-            "b": 3855.0,
+            "a": 0.0625566616654396,
+            "b": 2443.0,
             "latitude_start": 45.0,
             "longitude_start": -75.0,
             "latitude_end": 30.0,
             "longitude_end": -60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45W060.webp",
-            "a": 0.9479553699493408,
-            "b": 269.0,
+            "a": 3.745830535888672,
+            "b": 60.0,
             "latitude_start": 45.0,
             "longitude_start": -60.0,
             "latitude_end": 30.0,
             "longitude_end": -45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45W045.webp",
-            "a": 0.09544534981250763,
-            "b": 2134.0,
+            "a": 0.09565626829862595,
+            "b": 1864.0,
             "latitude_start": 45.0,
             "longitude_start": -45.0,
             "latitude_end": 30.0,
             "longitude_end": -30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45W030.webp",
-            "a": 0.04698152095079422,
-            "b": 4013.794921875,
+            "a": 0.05213458836078644,
+            "b": 2782.9560546875,
             "latitude_start": 45.0,
             "longitude_start": -30.0,
             "latitude_end": 30.0,
             "longitude_end": -15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45W015.webp",
-            "a": 0.03690475970506668,
-            "b": 3262.064697265625,
+            "a": 0.04257309064269066,
+            "b": 2129.0,
             "latitude_start": 45.0,
             "longitude_start": -15.0,
             "latitude_end": 30.0,
             "longitude_end": 0.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E000.webp",
-            "a": 0.03828074410557747,
-            "b": 3582.0,
+            "a": 0.0416715107858181,
+            "b": 2477.0,
             "latitude_start": 45.0,
             "longitude_start": 0.0,
             "latitude_end": 30.0,
             "longitude_end": 15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E015.webp",
-            "a": 0.03956012800335884,
-            "b": 3833.3388671875,
+            "a": 0.04121529683470726,
+            "b": 3396.0,
             "latitude_start": 45.0,
             "longitude_start": 15.0,
             "latitude_end": 30.0,
             "longitude_end": 30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E030.webp",
-            "a": 0.03205359727144241,
-            "b": 3065.0,
+            "a": 0.03595215082168579,
+            "b": 1821.0,
             "latitude_start": 45.0,
             "longitude_start": 30.0,
             "latitude_end": 30.0,
             "longitude_end": 45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E045.webp",
-            "a": 0.045506395399570465,
-            "b": 858.0,
+            "a": 0.04595808684825897,
+            "b": 338.0,
             "latitude_start": 45.0,
             "longitude_start": 45.0,
             "latitude_end": 30.0,
             "longitude_end": 60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E060.webp",
-            "a": 0.03477103263139725,
-            "b": 13.246222496032715,
+            "a": 0.033404406160116196,
+            "b": 14.467288970947266,
             "latitude_start": 45.0,
             "longitude_start": 60.0,
             "latitude_end": 30.0,
             "longitude_end": 75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E075.webp",
-            "a": 0.03513703867793083,
-            "b": 153.26129150390625,
+            "a": 0.030903657898306847,
+            "b": 154.3507537841797,
             "latitude_start": 45.0,
             "longitude_start": 75.0,
             "latitude_end": 30.0,
             "longitude_end": 90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E090.webp",
-            "a": 0.040524061769247055,
-            "b": -53.15164566040039,
+            "a": 0.037426579743623734,
+            "b": -48.147911071777344,
             "latitude_start": 45.0,
             "longitude_start": 90.0,
             "latitude_end": 30.0,
             "longitude_end": 105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E105.webp",
-            "a": 0.06881008297204971,
-            "b": 35.0,
+            "a": 0.06914302706718445,
+            "b": 36.0,
             "latitude_start": 45.0,
             "longitude_start": 105.0,
             "latitude_end": 30.0,
             "longitude_end": 120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E120.webp",
-            "a": 0.046460121870040894,
-            "b": 2984.0,
+            "a": 0.05414871498942375,
+            "b": 2147.0,
             "latitude_start": 45.0,
             "longitude_start": 120.0,
             "latitude_end": 30.0,
             "longitude_end": 135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N45E135.webp",
-            "a": 0.03849472478032112,
-            "b": 3652.0,
+            "a": 0.045945484191179276,
+            "b": 2123.0,
             "latitude_start": 45.0,
             "longitude_start": 135.0,
             "latitude_end": 30.0,
             "longitude_end": 150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W180.webp",
-            "a": 0.04359593987464905,
-            "b": 4272.48193359375,
+            "a": 0.0623292401432991,
+            "b": 2337.0,
             "latitude_start": 60.0,
             "longitude_start": -180.0,
             "latitude_end": 45.0,
             "longitude_end": -165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W165.webp",
-            "a": 0.0722392350435257,
-            "b": 1387.837646484375,
+            "a": 0.08995480090379715,
+            "b": 329.0,
             "latitude_start": 60.0,
             "longitude_start": -165.0,
             "latitude_end": 45.0,
             "longitude_end": -150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W150.webp",
-            "a": 0.04579668119549751,
-            "b": 2277.429443359375,
+            "a": 0.050237640738487244,
+            "b": 617.50634765625,
             "latitude_start": 60.0,
             "longitude_start": -150.0,
             "latitude_end": 45.0,
             "longitude_end": -135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W135.webp",
-            "a": 0.04730482026934624,
-            "b": 2215.0,
+            "a": 0.04531792178750038,
+            "b": 1563.0,
             "latitude_start": 60.0,
             "longitude_start": -135.0,
             "latitude_end": 45.0,
             "longitude_end": -120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W120.webp",
-            "a": 0.06905622035264969,
+            "a": 0.07146499305963516,
             "b": -78.0,
             "latitude_start": 60.0,
             "longitude_start": -120.0,
             "latitude_end": 45.0,
             "longitude_end": -105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W105.webp",
-            "a": 0.1940048635005951,
-            "b": 100.0,
+            "a": 0.18631263077259064,
+            "b": 103.0,
             "latitude_start": 60.0,
             "longitude_start": -105.0,
             "latitude_end": 45.0,
             "longitude_end": -90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W090.webp",
-            "a": 0.3207134008407593,
-            "b": 181.0,
+            "a": 0.30869144201278687,
+            "b": 210.0,
             "latitude_start": 60.0,
             "longitude_start": -90.0,
             "latitude_end": 45.0,
             "longitude_end": -75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W075.webp",
-            "a": 0.14664918184280396,
-            "b": 482.0,
+            "a": 0.13871333003044128,
+            "b": 326.0,
             "latitude_start": 60.0,
             "longitude_start": -75.0,
             "latitude_end": 45.0,
             "longitude_end": -60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W060.webp",
-            "a": 0.15599234402179718,
-            "b": 580.0,
+            "a": 0.13368114829063416,
+            "b": 772.0,
             "latitude_start": 60.0,
             "longitude_start": -60.0,
             "latitude_end": 45.0,
             "longitude_end": -45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W045.webp",
-            "a": 0.16534994542598724,
-            "b": 820.0,
+            "a": 0.20524340867996216,
+            "b": 284.0,
             "latitude_start": 60.0,
             "longitude_start": -45.0,
             "latitude_end": 45.0,
             "longitude_end": -30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60W015.webp",
-            "a": 0.18519411981105804,
-            "b": 288.0,
+            "a": 0.17121747136116028,
+            "b": 295.0,
             "latitude_start": 60.0,
             "longitude_start": -15.0,
             "latitude_end": 45.0,
             "longitude_end": 0.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E000.webp",
-            "a": 0.061390556395053864,
-            "b": 599.4983520507812,
+            "a": 0.05104028806090355,
+            "b": 701.1880493164062,
             "latitude_start": 60.0,
             "longitude_start": 0.0,
             "latitude_end": 45.0,
             "longitude_end": 15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E015.webp",
-            "a": 0.09537030756473541,
-            "b": 420.0125427246094,
+            "a": 0.09760016947984695,
+            "b": 202.58316040039062,
             "latitude_start": 60.0,
             "longitude_start": 15.0,
             "latitude_end": 45.0,
             "longitude_end": 30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E030.webp",
-            "a": 0.3448619246482849,
-            "b": 93.64778900146484,
+            "a": 0.29815152287483215,
+            "b": 145.29942321777344,
             "latitude_start": 60.0,
             "longitude_start": 30.0,
             "latitude_end": 45.0,
             "longitude_end": 45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E045.webp",
-            "a": 0.19657808542251587,
-            "b": 61.200042724609375,
+            "a": 0.16867117583751678,
+            "b": 61.20973205566406,
             "latitude_start": 60.0,
             "longitude_start": 45.0,
             "latitude_end": 45.0,
             "longitude_end": 60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E060.webp",
-            "a": 0.226850226521492,
-            "b": -24.472400665283203,
+            "a": 0.17884215712547302,
+            "b": 254.0237274169922,
             "latitude_start": 60.0,
             "longitude_start": 60.0,
             "latitude_end": 45.0,
             "longitude_end": 75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E075.webp",
-            "a": 0.06577485799789429,
-            "b": -38.35693359375,
+            "a": 0.05831281468272209,
+            "b": 69.61138153076172,
             "latitude_start": 60.0,
             "longitude_start": 75.0,
             "latitude_end": 45.0,
             "longitude_end": 90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E090.webp",
-            "a": 0.0532982274889946,
+            "a": 0.049715086817741394,
             "b": 974.0,
             "latitude_start": 60.0,
             "longitude_start": 90.0,
             "latitude_end": 45.0,
             "longitude_end": 105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E105.webp",
-            "a": 0.06600929796695709,
-            "b": 1177.0,
+            "a": 0.06443490087985992,
+            "b": 1190.0,
             "latitude_start": 60.0,
             "longitude_start": 105.0,
             "latitude_end": 45.0,
             "longitude_end": 120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E120.webp",
-            "a": 0.11652306467294693,
-            "b": -23.848045349121094,
+            "a": 0.11791862547397614,
+            "b": -12.706266403198242,
             "latitude_start": 60.0,
             "longitude_start": 120.0,
             "latitude_end": 45.0,
             "longitude_end": 135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E135.webp",
-            "a": 0.05611168593168259,
-            "b": 2692.0,
+            "a": 0.07573113590478897,
+            "b": 1379.0,
             "latitude_start": 60.0,
             "longitude_start": 135.0,
             "latitude_end": 45.0,
             "longitude_end": 150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E150.webp",
-            "a": 0.03490548953413963,
-            "b": 3863.0,
+            "a": 0.0378817543387413,
+            "b": 2281.0,
             "latitude_start": 60.0,
             "longitude_start": 150.0,
             "latitude_end": 45.0,
             "longitude_end": 165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N60E165.webp",
-            "a": 0.044867582619190216,
-            "b": 5032.0,
+            "a": 0.07897806167602539,
+            "b": 2377.340576171875,
             "latitude_start": 60.0,
             "longitude_start": 165.0,
             "latitude_end": 45.0,
             "longitude_end": 180.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W180.webp",
-            "a": 0.20258459448814392,
-            "b": 82.0,
+            "a": 0.159147247672081,
+            "b": 124.0,
             "latitude_start": 75.0,
             "longitude_start": -180.0,
             "latitude_end": 60.0,
             "longitude_end": -165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W165.webp",
-            "a": 0.04458539932966232,
-            "b": 171.0,
+            "a": 0.04224985092878342,
+            "b": 131.59161376953125,
             "latitude_start": 75.0,
             "longitude_start": -165.0,
             "latitude_end": 60.0,
             "longitude_end": -150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W150.webp",
-            "a": 0.04412907361984253,
-            "b": 752.8054809570312,
+            "a": 0.03911822289228439,
+            "b": 752.6380615234375,
             "latitude_start": 75.0,
             "longitude_start": -150.0,
             "latitude_end": 60.0,
             "longitude_end": -135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W135.webp",
-            "a": 0.08245246112346649,
-            "b": 511.0,
+            "a": 0.08204393088817596,
+            "b": 499.0,
             "latitude_start": 75.0,
             "longitude_start": -135.0,
             "latitude_end": 60.0,
             "longitude_end": -120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W120.webp",
-            "a": 0.18638083338737488,
-            "b": 505.0,
+            "a": 0.19172950088977814,
+            "b": 467.0,
             "latitude_start": 75.0,
             "longitude_start": -120.0,
             "latitude_end": 60.0,
             "longitude_end": -105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W105.webp",
-            "a": 0.23691178858280182,
-            "b": 480.0,
+            "a": 0.24020761251449585,
+            "b": 458.0,
             "latitude_start": 75.0,
             "longitude_start": -105.0,
             "latitude_end": 60.0,
             "longitude_end": -90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W090.webp",
-            "a": 0.09112928062677383,
-            "b": 1085.0,
+            "a": 0.08795260637998581,
+            "b": 1082.0,
             "latitude_start": 75.0,
             "longitude_start": -90.0,
             "latitude_end": 60.0,
             "longitude_end": -75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W075.webp",
-            "a": 0.07933975011110306,
-            "b": 1154.0,
+            "a": 0.07792600244283676,
+            "b": 1184.0,
             "latitude_start": 75.0,
             "longitude_start": -75.0,
             "latitude_end": 60.0,
             "longitude_end": -60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W060.webp",
-            "a": 0.05922695994377136,
-            "b": 1456.0,
+            "a": 0.059079863131046295,
+            "b": 1464.0,
             "latitude_start": 75.0,
             "longitude_start": -60.0,
             "latitude_end": 60.0,
             "longitude_end": -45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W045.webp",
-            "a": 0.06087818741798401,
-            "b": 960.0,
+            "a": 0.06178850308060646,
+            "b": 898.0,
             "latitude_start": 75.0,
             "longitude_start": -45.0,
             "latitude_end": 60.0,
             "longitude_end": -30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W030.webp",
-            "a": 0.052924156188964844,
-            "b": 1524.0,
+            "a": 0.05139844864606857,
+            "b": 1530.0,
             "latitude_start": 75.0,
             "longitude_start": -30.0,
             "latitude_end": 60.0,
             "longitude_end": -15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75W015.webp",
-            "a": 0.07006140798330307,
-            "b": 2170.83837890625,
+            "a": 0.06080925092101097,
+            "b": 2110.16943359375,
             "latitude_start": 75.0,
             "longitude_start": -15.0,
             "latitude_end": 60.0,
             "longitude_end": 0.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E000.webp",
-            "a": 0.07680550217628479,
-            "b": 1181.5780029296875,
+            "a": 0.07165436446666718,
+            "b": 1267.6849365234375,
             "latitude_start": 75.0,
             "longitude_start": 0.0,
             "latitude_end": 60.0,
             "longitude_end": 15.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E015.webp",
-            "a": 0.08264634758234024,
-            "b": 1130.28173828125,
+            "a": 0.09657569974660873,
+            "b": 724.0543823242188,
             "latitude_start": 75.0,
             "longitude_start": 15.0,
             "latitude_end": 60.0,
             "longitude_end": 30.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E030.webp",
-            "a": 0.16658852994441986,
-            "b": 422.0,
+            "a": 0.1618979424238205,
+            "b": 411.0,
             "latitude_start": 75.0,
             "longitude_start": 30.0,
             "latitude_end": 60.0,
             "longitude_end": 45.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E045.webp",
-            "a": 0.14527587592601776,
-            "b": 265.0,
+            "a": 0.14941202104091644,
+            "b": 210.0,
             "latitude_start": 75.0,
             "longitude_start": 45.0,
             "latitude_end": 60.0,
             "longitude_end": 60.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E060.webp",
-            "a": 0.13633622229099274,
-            "b": 286.0,
+            "a": 0.1346386820077896,
+            "b": 178.0,
             "latitude_start": 75.0,
             "longitude_start": 60.0,
             "latitude_end": 60.0,
             "longitude_end": 75.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E075.webp",
-            "a": 0.2646656334400177,
-            "b": 41.0,
+            "a": 0.26205378770828247,
+            "b": 38.0,
             "latitude_start": 75.0,
             "longitude_start": 75.0,
             "latitude_end": 60.0,
             "longitude_end": 90.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E090.webp",
-            "a": 0.16110508143901825,
-            "b": 1.9513777494430542,
+            "a": 0.1553691029548645,
+            "b": 2.3273332118988037,
             "latitude_start": 75.0,
             "longitude_start": 90.0,
             "latitude_end": 60.0,
             "longitude_end": 105.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E105.webp",
-            "a": 0.27681201696395874,
-            "b": 30.0,
+            "a": 0.26733478903770447,
+            "b": 31.0,
             "latitude_start": 75.0,
             "longitude_start": 105.0,
             "latitude_end": 60.0,
             "longitude_end": 120.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E120.webp",
-            "a": 0.12600576877593994,
-            "b": 26.925003051757812,
+            "a": 0.11384847015142441,
+            "b": 33.12160873413086,
             "latitude_start": 75.0,
             "longitude_start": 120.0,
             "latitude_end": 60.0,
             "longitude_end": 135.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E135.webp",
-            "a": 0.09491837024688721,
-            "b": 35.0,
+            "a": 0.0815114676952362,
+            "b": 276.4927978515625,
             "latitude_start": 75.0,
             "longitude_start": 135.0,
             "latitude_end": 60.0,
             "longitude_end": 150.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E150.webp",
-            "a": 0.13203828036785126,
-            "b": 97.0,
+            "a": 0.12083009630441666,
+            "b": 90.0,
             "latitude_start": 75.0,
             "longitude_start": 150.0,
             "latitude_end": 60.0,
             "longitude_end": 165.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         },
         {
             "filename": "N75E165.webp",
-            "a": 0.06662017852067947,
-            "b": 2062.0,
+            "a": 0.11259514838457108,
+            "b": 128.13902282714844,
             "latitude_start": 75.0,
             "longitude_start": 165.0,
             "latitude_end": 60.0,
             "longitude_end": 180.0,
-            "width": 225,
-            "height": 225
+            "width": 720,
+            "height": 720
         }
     ],
     "compression_method": "8-bit"
