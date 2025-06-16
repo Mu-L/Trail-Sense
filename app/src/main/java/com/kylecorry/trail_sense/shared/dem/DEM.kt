@@ -6,6 +6,8 @@ import com.kylecorry.andromeda.core.cache.GeospatialCache
 import com.kylecorry.andromeda.core.coroutines.onIO
 import com.kylecorry.andromeda.core.tryOrDefault
 import com.kylecorry.andromeda.json.JsonConvert
+import com.kylecorry.luna.streams.readText
+import com.kylecorry.luna.streams.readUntil
 import com.kylecorry.sol.math.SolMath.roundNearest
 import com.kylecorry.sol.science.geology.CoordinateBounds
 import com.kylecorry.sol.units.Coordinate
@@ -35,6 +37,7 @@ class DigitalElevationModelIndex(
 object DEM {
     private var cache = GeospatialCache<Distance>(Distance.meters(100f), size = 40)
     private var cachedIndex: DigitalElevationModelIndex? = null
+    private var useDefaultModel = false
 
     suspend fun getElevation(location: Coordinate): Distance? = onIO {
         val files = AppServiceRegistry.get<FileSubsystem>()
@@ -63,9 +66,14 @@ object DEM {
                 sources.firstOrNull { it.second.contains(rounded) }
                     ?: return@getOrPut Distance.meters(0f)
             tryOrDefault(Distance.meters(0f)) {
-                files.get("dem/${image.first}").inputStream().use {
-                    Distance.meters(image.second.read(it, location).first())
+                val stream = if (useDefaultModel) {
+                    files.streamAsset("dem/${image.first}")
+                } else {
+                    files.streamLocal("dem/${image.first}")
                 }
+                stream?.use {
+                    Distance.meters(image.second.read(it, location).first())
+                } ?: Distance.meters(0f)
             }
         }
     }
@@ -73,21 +81,26 @@ object DEM {
     fun invalidateCache() {
         cache = GeospatialCache(Distance.meters(100f), size = 40)
         cachedIndex = null
+        useDefaultModel = true
     }
 
     fun isAvailable(): Boolean {
-        val files = AppServiceRegistry.get<FileSubsystem>()
-        return files.get("dem/index.json").exists()
+        return true
     }
 
     private suspend fun loadIndex() = onIO {
         val files = AppServiceRegistry.get<FileSubsystem>()
         val index = files.get("dem/index.json")
-        if (!index.exists()) {
-            return@onIO null
+        var json = ""
+        json = if (!index.exists()) {
+            useDefaultModel = true
+            files.streamAsset("dem/index.json")?.use { it.readUntil { false } } ?: ""
+        } else {
+            useDefaultModel = false
+            index.readText()
         }
         val parsed =
-            tryOrDefault(null) { JsonConvert.fromJson<DigitalElevationModelIndex>(index.readText()) }
+            tryOrDefault(null) { JsonConvert.fromJson<DigitalElevationModelIndex>(json) }
         cachedIndex = parsed
         parsed
     }

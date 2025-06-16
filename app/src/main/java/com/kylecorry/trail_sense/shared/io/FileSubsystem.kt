@@ -12,6 +12,7 @@ import androidx.core.net.toUri
 import com.kylecorry.andromeda.bitmaps.BitmapUtils
 import com.kylecorry.andromeda.core.coroutines.onIO
 import com.kylecorry.andromeda.core.tryOrDefault
+import com.kylecorry.andromeda.files.AssetFileSystem
 import com.kylecorry.andromeda.files.ExternalFileSystem
 import com.kylecorry.andromeda.files.FileSaver
 import com.kylecorry.andromeda.files.LocalFileSystem
@@ -28,6 +29,7 @@ class FileSubsystem private constructor(private val context: Context) {
 
     private val external = ExternalFileSystem(context)
     private val local = LocalFileSystem(context)
+    private val assets = AssetFileSystem(context)
 
     val SCHEME_ASSETS = "android-assets://"
 
@@ -82,6 +84,10 @@ class FileSubsystem private constructor(private val context: Context) {
 
     suspend fun streamLocal(path: String): InputStream = onIO {
         local.inputStream(path)
+    }
+
+    suspend fun streamAsset(path: String): InputStream? = onIO {
+        assets.stream(path)
     }
 
     suspend fun stream(uri: Uri): InputStream? = onIO {
